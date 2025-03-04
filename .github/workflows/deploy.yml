@@ -1,0 +1,16 @@
+# Workflow: 하나의 yml 파일을 하나의 Workflow 라고 부릅니다.
+name: Github Actions 실행시켜보기   # workflow 이름
+
+on:
+  push:
+    branches:
+      - main    # main 브랜치에 push 될 떼 아래 Workflow 를 실행합니다.
+
+jobs:
+  My-Deploy-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello World 찍기
+        run: echo "Hello World"
+
